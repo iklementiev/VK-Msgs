@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/light_background"
+    android:orientation="vertical" >
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:background="@drawable/black_top">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Настройки"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >       	
+	    <Button
+	        android:id="@+id/stgLogBtn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Open Login Page" />
+		 	
+	    <Spinner
+	        android:id="@+id/spinner1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" 
+	        android:text="Уведомления" />
+		 
+	    <Button
+	        android:id="@+id/btnClearFiles"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Очистить кеш данных" />
+	    
+	    <Button
+	        android:id="@+id/btnClearAvaCache"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Очистить кеш аватаров" />
+	    
+	     <Spinner
+	        android:id="@+id/spinner3"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" 
+	        android:text="Язык интерфейса" />
+	     
+	    <Spinner
+	        android:id="@+id/spinner2"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" 
+	        android:text="Сортировка контактов" />
+	    
+	    <!-- <Button
+	        android:id="@+id/btnContactsSort"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Сортировка контактов" /> -->
+	   
+	    <Button
+	        android:id="@+id/btnWriteDev"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Написать автору" />
+	   
+	    <Button
+	        android:id="@+id/btnMarket"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Оценить в маркете" />
+	    
+	    <Button
+	        android:id="@+id/btnExit"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="Выйти" />
+
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>

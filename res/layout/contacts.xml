@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/light_background"
+    android:orientation="vertical" >
+    
+<FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:background="@drawable/black_top">
+	<LinearLayout android:orientation="horizontal" 
+	    android:id="@+id/radioGroup1" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent">
+            <ToggleButton android:enabled="false" 
+                android:textColor="@drawable/text_tab_label_color" 
+                android:id="@+id/btnFriends" 
+                android:background="@drawable/bg_contacts_selector" 
+                android:layout_width="0.0dip" android:layout_height="fill_parent" 
+                android:checked="true" 
+                android:textOn="@string/friends" 
+                android:textOff="@string/friends" 
+                android:layout_weight="1.0" />
+            <ToggleButton android:textColor="@drawable/text_tab_label_color" 
+                android:id="@+id/btnOnline" 
+                android:background="@drawable/bg_contacts_selector" 
+                android:layout_width="0.0dip" 
+                android:layout_height="fill_parent" 
+                android:textOn="@string/online" 
+                android:textOff="@string/online" 
+                android:layout_weight="1.0" />
+            <ToggleButton android:textColor="@drawable/text_tab_label_color" 
+                android:id="@+id/btnPhoneContacts" 
+                android:background="@drawable/bg_contacts_selector" 
+                android:layout_width="0.0dip" 
+                android:layout_height="fill_parent" 
+                android:textOn="@string/contacts" 
+                android:textOff="@string/contacts" 
+                android:layout_weight="1.0" />
+        </LinearLayout>
+    <!-- <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <Button
+            android:id="@+id/btnFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_indicator"
+            android:text="Друзья" />
+
+        <Button
+            android:id="@+id/btnOnline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_indicator"
+            android:text="Онлайн" />
+
+        <Button
+            android:id="@+id/btnPhoneContacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_indicator"
+            android:text="Контакты" />
+        
+    </LinearLayout> -->
+      
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" 
+        android:background="@drawable/silver_divider">
+
+		<EditText
+		    android:id="@+id/contactsSearch"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:hint="Поиск"
+		    android:paddingLeft="40dp"
+		    android:ems="10" />
+		<Button
+		    android:id="@+id/button1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="@drawable/search_icon" 
+		    android:layout_gravity="center_vertical"
+		    android:layout_marginLeft="15dp"
+		    />        	
+    </FrameLayout>
+
+    <ListView
+        android:id="@+id/lvContacts"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:cacheColorHint="#00000000"
+        android:fastScrollEnabled="true"
+        android:padding="2dp">
+    </ListView>
+
+</LinearLayout>

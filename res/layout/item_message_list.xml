@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="5.0dip" 
+    android:focusable="false" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@color/conversation_time_date_color" 
+        android:gravity="center" android:id="@+id/dateHeader" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:shadowColor="#ffffffff" 
+        android:shadowDy="1.0" 
+        android:shadowRadius="1.0" />
+    <LinearLayout android:orientation="horizontal" 
+        android:id="@+id/messageFrame" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_below="@id/dateHeader">
+        <!-- <ru.st1ng.vk.views.UserImageView android:layout_gravity="bottom" 
+            android:id="@+id/senderImage" 
+            android:visibility="gone" 
+            android:layout_width="@dimen/avatar_size" 
+            android:layout_height="@dimen/avatar_size" 
+            android:src="@drawable/im_nophoto" /> -->
+        <ImageView android:layout_gravity="bottom" 
+            android:id="@+id/pendingSend" 
+            android:layout_width="20.0dip" 
+            android:layout_height="20.0dip" 
+            android:visibility="invisible"
+            android:src="@anim/ic_spin_animation_blue" />
+        <TextView android:textColor="@color/conversation_time_date_color" 
+            android:layout_gravity="bottom" 
+            android:id="@+id/timeLeft"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginBottom="2.0dip" 
+            android:text="12.02" 
+            android:shadowColor="#ffffffff" 
+            android:shadowDy="1.0" 
+            android:shadowRadius="1.0" />
+
+        <LinearLayout
+            android:id="@+id/bubbleLayout"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.54"
+            android:background="@drawable/bg_msg_out_selector"
+            android:orientation="vertical"
+            android:paddingLeft="11.0dip" >
+
+            <TextView android:textAppearance="?android:textAppearanceMedium" 
+                android:textSize="18.0dip" 
+                android:textColor="#ff000000" 
+                android:autoLink="all" 
+                android:linksClickable="true" 
+                android:id="@+id/messageText" 
+                android:duplicateParentState="true" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:text="test" />
+        </LinearLayout>
+        <TextView android:textColor="@color/conversation_time_date_color" 
+            android:layout_gravity="bottom" 
+            android:id="@+id/timeRight" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginBottom="2.0dip" 
+            android:shadowColor="#ffffffff" 
+            android:shadowDy="1.0" 
+            android:shadowRadius="1.0" />
+    </LinearLayout>
+</RelativeLayout>

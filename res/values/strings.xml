@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Привет мир</string>
+    <string name="app_name">VK Msgs</string>
+    <color name="bg">#000</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+   
+    <string name="contacts">Contacts</string>
+    <string name="friends">Friends</string>
+    <string name="online">Online</string>
+    <string name="search_friends">Search Friends</string>
+    
+    <string name="forward">Forward</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+    
+    <string name="take_photo">Take photo</string>
+    <string name="choose_existing_photo">Choose existing photo</string>
+    <string name="uploading">Uploading files</string>
+    <string name="downloading">Downloading…</string>
+    <string name="error_downloading">Downloading failed</string>
+    <string name="app_not_found">There is no app to open file on your device</string>
+    <string name="search_for_all_your_friends">"Search for your friends and contacts among all registred users "</string>
+    <string name="show_me_online">Show me online</string>
+    <string name="attach_location">Location</string>
+    <string name="choose_location">Choose Location</string>
+    
+    <string name="choose_recepient">Choose Recepient</string>
+    <string name="forwarded_messages">"Forwarded</string>
+        
+</resources>

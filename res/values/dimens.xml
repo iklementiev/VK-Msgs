@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_size">110.0dip</dimen>
+    <dimen name="avatar_size">55.0dip</dimen>
+    <dimen name="avatar_size_small">30.0dip</dimen>
+    <dimen name="font_size_small">9.0dip</dimen>
+    <dimen name="font_size_medium">11.0dip</dimen>
+    <dimen name="font_size_large">13.0dip</dimen>
+</resources>

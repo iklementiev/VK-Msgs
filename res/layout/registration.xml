@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:background="@drawable/light_background"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:background="@drawable/black_top">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Регистрация"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/regBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"            
+            android:background="@drawable/regbackbtn"
+            android:layout_gravity="center_vertical"
+            />
+    </FrameLayout>
+    
+    
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"         
+        >
+    	<EditText
+	        android:id="@+id/etPhoneNumber"
+	        android:layout_width="240dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center|center_vertical"
+	        android:ems="10"
+	        android:background="@drawable/inputsignup"
+	        android:hint="Номер Вашего телефона" 
+	        />	
+	    <ImageView
+	        android:id="@+id/ivCheckPhone"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right|center_vertical"	        
+	        android:visibility="gone"
+	        android:layout_marginRight="10dp"
+	        />
+    </FrameLayout>
+    
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        >
+	    <EditText
+	        android:id="@+id/etName"
+	        android:layout_width="240dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:ems="10"
+	        android:background="@drawable/inputsignup"
+	        android:hint="Ваше имя" 
+	        />
+	    <ImageView
+	        android:id="@+id/ivCheckName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right|center_vertical"	        
+	        android:background="@drawable/ok"
+	        android:layout_marginRight="10dp"
+	        android:visibility="gone"
+	        />
+    </FrameLayout>
+    <FrameLayout
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content" 
+       >
+	     <EditText
+	        android:id="@+id/etSurname"
+	        android:layout_width="240dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:ems="10"
+	        android:background="@drawable/inputsignup"
+	        android:hint="Ваша фамилия" 
+	        />
+	     <ImageView
+	        android:id="@+id/ivCheckSurname"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="right|center_vertical"	        
+	        android:background="@drawable/ok"
+	        android:layout_marginRight="10dp"
+	        android:visibility="gone"
+	        />
+	</FrameLayout>
+    <Button
+        android:id="@+id/regBtn"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical|center_horizontal"
+        android:background="@drawable/bluebtn"
+        android:text="Зарегистрироваться" 
+        />
+    
+</LinearLayout>

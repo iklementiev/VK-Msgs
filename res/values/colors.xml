@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="conversation_time_date_color">#ff8f9eac</color>
+    <color name="bg_message_unread_color">#ffc0cad5</color>
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:background="@drawable/light_background"
+    android:orientation="vertical" >
+            
+    <LinearLayout  
+	    android:id="@+id/frameLayout1"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+	    android:orientation="vertical"
+	    android:layout_weight="1"
+	    >
+
+       <ImageView
+           android:id="@+id/logo"
+           android:layout_width="111dp"
+           android:layout_height="96dp"
+           android:layout_gravity="top|center"
+           android:paddingBottom="20dp"
+           android:paddingTop="20dp"
+           android:src="@drawable/logo" 
+           />
+       <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"        
+        >
+		    <EditText
+		        android:id="@+id/etPhoneNumber"
+		        android:layout_width="240dp"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:ems="10"
+		        android:ellipsize="end"
+		        android:maxLines="1"
+		        android:background="@drawable/logininputr"
+		        android:layout_marginLeft="10dp"
+	 	        android:hint="Номер Вашего телефона" />
+		    
+		    <ImageView
+		        android:id="@+id/loginPassImg"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="right|center_vertical"
+		        android:layout_marginRight="10dp"
+		        android:background="@drawable/phone_active"
+		        />
+	    </FrameLayout>
+	    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"        
+        >
+		    <EditText
+		        android:id="@+id/etPassword"
+		        android:layout_width="240dp"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:ems="10"
+		        android:ellipsize="end"
+		        android:maxLines="1"
+		        android:background="@drawable/logininputl"
+		        android:hint="Ваш пароль"
+		        android:layout_marginRight="-10dp"
+		        android:inputType="textPassword" 
+		        />
+		     <ImageView
+		        android:id="@+id/loginPassImg"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="left|center_vertical"
+		        android:layout_marginLeft="10dp"
+		        android:background="@drawable/pass_active"
+		        />		</FrameLayout>
+	    <Button
+	        android:id="@+id/loginBtn"
+	        android:layout_width="240dp"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center"
+	        android:gravity="center_vertical|center_horizontal"
+	        android:background="@drawable/bluebtn"
+	        android:text="Войти" 
+	        />
+	    
+	</LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameReg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@drawable/loginregbtn" >
+
+        <TextView
+            android:id="@+id/txtReg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center"
+            android:layout_marginTop="-50dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Зарегистрироваться"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/txtReg2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center"
+            android:layout_marginBottom="50dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Вы сможете бесплатно обмениваться мгновенными сообщениями с друзьями"
+            android:textColor="@color/white" />
+    </FrameLayout>
+    
+</LinearLayout>

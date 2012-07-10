@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/light_background" >
+    
+    <FrameLayout android:id="@+id/backFrame" 
+        android:background="@drawable/bg_top_black" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content">
+		<FrameLayout
+		    android:id="@+id/infoFrame"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" 
+	        android:background="@drawable/black_top">	
+	        <Button
+	            android:id="@+id/btnBack"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"            
+	            android:background="@drawable/regbackbtn"
+	            android:layout_gravity="center_vertical"
+	            />
+	        
+	        <LinearLayout
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center" >		    
+	            <TextView
+		            android:id="@+id/tvName"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center"
+		            android:text="UserName"
+		            android:textAppearance="?android:attr/textAppearanceLarge" />				
+		        <ImageView
+		            android:id="@+id/ivOnline"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="right|center_vertical"
+		            android:layout_marginLeft="10dp"
+		            android:visibility="gone"
+		            android:src="@drawable/online" />	        
+		        
+	    	</LinearLayout>
+	
+	        <ImageView
+	            android:id="@+id/ivAvatar"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="right|center_vertical" 
+	            android:layout_marginRight="20dp"
+	            />
+	
+	        <ImageView
+	            android:id="@+id/ivPhoto"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="right|center_vertical"
+	            android:layout_marginRight="10dp"
+	            android:src="@drawable/attach" />	
+	    </FrameLayout>
+	    
+		<RelativeLayout
+		    android:id="@+id/messageOptions"
+		    android:layout_width="fill_parent"		    
+		    android:layout_height="fill_parent"
+		    android:layout_gravity="center_vertical"
+		    android:paddingLeft="5.0dip"
+		    android:paddingRight="5.0dip"
+		    android:visibility="invisible" >
+	
+	            <Button android:textColor="#ffffffff" 
+	                android:layout_gravity="center_vertical" 
+	                android:id="@+id/btnCancel" 
+	                android:background="@drawable/bg_button_cancel_selector" 
+	                android:layout_width="wrap_content" 
+	                android:layout_height="wrap_content" 
+	                android:text="@string/cancel" />
+	            <Button android:textColor="#ffffffff" 
+	                android:layout_gravity="right|center" 
+	                android:id="@+id/btnForward" 
+	                android:background="@drawable/bg_button_forward_selector" 
+	                android:layout_width="wrap_content" 
+	                android:layout_height="wrap_content" 
+	                android:text="@string/forward" 
+	                 />
+	            
+	            <Button android:textColor="#ffffffff" 
+	                android:layout_gravity="right|center" 
+	                android:id="@+id/btnDelete" 
+	                android:background="@drawable/bg_button_delete_selector" 
+	                android:layout_width="wrap_content" 
+	                android:layout_height="wrap_content" 
+	                android:layout_marginLeft="10.0dip" 
+	                android:text="@string/delete" 
+	                android:layout_alignParentRight="true" />
+	        </RelativeLayout>
+	</FrameLayout>
+    	
+	<FrameLayout android:layout_width="fill_parent" 
+	    android:layout_height="0.0dip" 
+	    android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" 
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent">
+            <FrameLayout android:layout_width="fill_parent" 
+                android:layout_height="0.0dip" 
+                android:layout_weight="1.0">
+                <LinearLayout android:orientation="vertical" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="fill_parent">
+                    <ListView                         
+                        android:id="@+id/lvMessages" 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="0.0dip" 
+                        android:stackFromBottom="true" 
+                        android:listSelector="#00000000" 
+		                android:transcriptMode="normal" 
+		                android:cacheColorHint="#00000000" 
+		                android:divider="#ffdfdfdf" 
+		                android:choiceMode="multipleChoice"                         
+                        android:layout_weight="1.0" />
+                     <TextView android:textColor="@color/conversation_time_date_color" 
+                         android:id="@+id/userStatusText" 
+		                android:layout_width="wrap_content" 
+		                android:layout_height="wrap_content" 
+		                android:shadowColor="#ffffffff" 
+		                android:layout_gravity="center_horizontal"
+		                android:shadowDy="1.0" 
+		                android:shadowRadius="1.0" 
+		                android:text=""/>
+                </LinearLayout>
+                <LinearLayout android:gravity="bottom" 
+                    android:layout_gravity="bottom" 
+                    android:orientation="vertical" 
+		            android:id="@+id/attachesMenu" 
+		            android:background="@drawable/bg_attach_menu" 
+		            android:paddingLeft="0.0dip" 
+		            android:paddingRight="0.0dip" 
+		            android:visibility="invisible" 
+		            android:layout_width="fill_parent" 
+		            android:layout_height="wrap_content">
+		            <TextView android:textAppearance="?android:textAppearanceMedium" 
+		                android:textColor="#ffffffff" 
+		                android:id="@+id/attachTakePhoto" 
+		                android:background="@drawable/bg_attach_menu_selector" 
+		                android:paddingLeft="10.0dip" 
+		                android:paddingTop="15.0dip" 
+		                android:paddingBottom="15.0dip" 
+		                android:layout_width="fill_parent" 
+		                android:layout_height="wrap_content" 
+		                android:text="@string/take_photo" 
+		                android:drawableLeft="@drawable/ic_attach_photo" 
+		                android:drawablePadding="5.0dip" />
+		            <TextView android:textAppearance="?android:textAppearanceMedium" 
+		                android:textColor="#ffffffff" 
+		                android:id="@+id/attachChoosePhoto" 
+		                android:background="@drawable/bg_attach_menu_selector" 
+		                android:paddingLeft="10.0dip" 
+		                android:paddingTop="15.0dip" 
+		                android:paddingBottom="15.0dip" 
+		                android:layout_width="fill_parent" 
+		                android:layout_height="wrap_content" 
+		                android:text="@string/choose_existing_photo" 
+		                android:drawableLeft="@drawable/ic_attach_gallery" 
+		                android:drawablePadding="5.0dip" />
+		            <TextView android:textAppearance="?android:textAppearanceMedium" 
+		                android:textColor="#ffffffff" 
+		                android:id="@+id/attachLocation" 
+		                android:background="@drawable/bg_attach_menu_selector" 
+		                android:paddingLeft="10.0dip" 
+		                android:paddingTop="15.0dip" 
+		                android:paddingBottom="15.0dip" 
+		                android:layout_width="fill_parent" 
+		                android:layout_height="wrap_content" 
+		                android:text="@string/attach_location" 
+		                android:drawableLeft="@drawable/ic_attach_geo" 
+		                android:drawablePadding="5.0dip" />
+		        </LinearLayout>                
+            </FrameLayout>
+          <!--   <LinearLayout 
+                android:background="@drawable/grey_bottom" 
+                android:paddingLeft="5.0dip" android:paddingTop="5.0dip" 
+                android:paddingRight="3.0dip" android:paddingBottom="1.0dip" 
+                android:layout_width="fill_parent" android:layout_height="wrap_content">
+                
+                                
+            </LinearLayout> -->
+        </LinearLayout>
+	</FrameLayout>
+        
+	<LinearLayout android:orientation="horizontal" 
+	    android:id="@+id/widget_search" 
+	    android:background="@drawable/bg_shadow" 
+	    android:paddingTop="3.0dip" 
+	    android:paddingBottom="8.0dip" 
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/attachImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"            
+            android:background="@drawable/attachbtn"
+            android:layout_gravity="center_vertical"		            
+            android:layout_marginLeft="5dp"		            
+            />
+
+    	<EditText
+    	    android:id="@+id/etText"
+    	    android:layout_width="wrap_content"
+    	    android:layout_height="wrap_content"
+    	    android:layout_gravity="center_vertical"
+    	    android:hint="Написать сообщение"
+    	    android:ems="10" />
+    	
+    	<Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"            
+            android:background="@drawable/blue_button"
+            android:layout_gravity="center_vertical"            
+            android:text="Отпр"
+            /> 
+    </LinearLayout>
+	
+	<HorizontalScrollView android:layout_gravity="center_vertical" 
+        android:id="@+id/attachesList" 
+        android:background="@drawable/bg_attach_background" 
+        android:visibility="gone" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content">
+        <LinearLayout android:layout_gravity="center_vertical" 
+            android:orientation="horizontal" 
+            android:id="@+id/attachesLayout" 
+            android:padding="10.0dip" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content">
+            <ImageView android:id="@+id/attachTakePhotoMore" 
+                android:layout_width="@dimen/image_size" 
+                android:layout_height="@dimen/image_size" 
+                android:layout_marginLeft="10.0px" 
+                android:src="@drawable/ic_attach_photo_b_selector" />
+            <ImageView android:id="@+id/attachChoosePhotoMore" 
+                android:layout_width="@dimen/image_size" 
+                android:layout_height="@dimen/image_size" 
+                android:layout_marginLeft="10.0px" 
+                android:src="@drawable/ic_attach_gallery_b_selector" />
+            <ImageView android:id="@+id/attachLocationMore" 
+                android:layout_width="@dimen/image_size" 
+                android:layout_height="@dimen/image_size" 
+                android:layout_marginLeft="10.0px" 
+                android:src="@drawable/ic_attach_geo_b_selector" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/light_background" >
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:background="@drawable/black_top">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Сообщения"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+        <Button
+            android:id="@+id/msgComposeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"    
+            android:layout_marginRight="20dp"
+            android:background="@drawable/compose"
+            />
+    </FrameLayout>
+	<FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp" 
+        android:background="@drawable/silver_divider">
+
+		<EditText
+		    android:id="@+id/dialogsSearch"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:hint="Поиск"
+		    android:paddingLeft="40dp"
+		    android:ems="10" />
+
+		<Button
+		    android:id="@+id/button1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:background="@drawable/search_icon" 
+		    android:layout_gravity="center_vertical"
+		    android:layout_marginLeft="15dp"
+		    />
+
+		
+        	
+        </FrameLayout>
+          
+	
+		<ListView
+	        android:id="@+id/lvDialogs"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" 
+	        android:fadingEdge="none"
+	        android:visibility="gone"	
+	        android:cacheColorHint="#00000000" 
+	        android:divider="#ffdfdfdf" 
+	        android:dividerHeight="1.0px"         
+	        >
+    	</ListView>
+    
+		<FrameLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"	 
+	        android:id="@+id/frame4bar"        
+	        >
+		
+	    	<ProgressBar
+	    	    android:id="@+id/progressBar1"
+	    	    android:layout_width="70dp"
+	    	    android:layout_height="70dp"
+	    	    android:layout_gravity="center_vertical|center_horizontal"
+	    	    android:layout_centerInParent="true"	    	      	    
+	    	    android:indeterminateDrawable="@drawable/loader_blue" />
+  
+		</FrameLayout>
+</LinearLayout>
